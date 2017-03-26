@@ -30,7 +30,7 @@ if(!file.exists('activity.csv')){
 
 ## Loading and preprocessing the data
 
-####Show any code that is needed to:
+#### Show any code that is needed to:
  1. Load the data (i.e. read.csv()).
  2. Process/transform the data (if necessary) into a format suitable for your analysis.
 
@@ -152,7 +152,7 @@ missing_steps <- sum(is.na(activity_data$steps))
 ##### The imputation technique, shown below, replaces missing step values with the average number of steps for the giving five minute interval that day of the week. The primary motivation for this methodology is that individuals generally experience a pattern of behavior in their lives. For those tracking their fitness, a routine and homogenenous exercise habit is likely. This is supported by the following data investigation.
 
 
-###Total Number of Missing Steps by Interval
+### Total Number of Missing Steps by Interval
 ```{r missing_steps_by_interval}
 activity_data %>%
   filter(is.na(steps)==T) %>%
@@ -164,7 +164,7 @@ activity_data %>%
 ##### The number of missing steps for a given interval is always 8, indicating no bias among intervals. 
 
 
-###Total Number of Missing Steps by Day of Week
+### Total Number of Missing Steps by Day of Week
 ```{r missing_steps_by_day_of_week}
 activity_data_clean %>%
   filter(is.na(steps)==T) %>%
@@ -174,7 +174,7 @@ activity_data_clean %>%
   ungroup()
 ```
 
-######Monday and Friday have an additional day of missing values (there are 288 5-minute intervals in a day), but given two months of data (approximately 8-9 total days for each day of the week), this is not a significant bias.
+###### Monday and Friday have an additional day of missing values (there are 288 5-minute intervals in a day), but given two months of data (approximately 8-9 total days for each day of the week), this is not a significant bias.
 
 3. Create a new dataset that is equal to the original dataset but with the missing data filled in.
 
