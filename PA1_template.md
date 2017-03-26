@@ -304,7 +304,7 @@ imp_median_steps_day <- median(impsteps_per_day$steps_day,na.rm = T)
 
 ##### Compared with the original mean and median of 10766 and 10765, respectively, the data imputation did not have a major impact on average the number of steps per day. As briefly discussed above, the imputation technique assumes the data comes from a user that has a general pattern for their lifestyle for each five minute interval each day of the week. If this hypothesis was correct, taking the mean number of steps for each five minute interval across each weekday, as was used for this imputation, would produce a day of steps very similar to any other day. The missing number of steps by time of day (i.e interval) was uniform, which was the most likely factor to bias the results. 
 
-#####For example, missing time from a particularly active or inactive hour could alter the results after imputation. While there was one additional missing day of data for Monday or Friday, it was not substantial, and did not appear to have a major impact on the results after imputation.
+##### For example, missing time from a particularly active or inactive hour could alter the results after imputation. While there was one additional missing day of data for Monday or Friday, it was not substantial, and did not appear to have a major impact on the results after imputation.
 
 
 ## Are there differences in activity patterns between weekdays and weekends?
@@ -350,5 +350,3 @@ impsteps_line + geom_line() +
 ![](PA1_template_files/figure-html/impute_steps_per_interval_lineplot-1.png)<!-- -->
 
 ##### Based on the graphs above, it appears that there are two very different patterns of activity between weekdays and weekends. On the weekdays, there is more activity between 6am and 8am, with a much higher maximum between 8am and 9am. During the weekends, however, there is more activity during the mid-morning and early afternoon (10am - 5pm).
-
-
